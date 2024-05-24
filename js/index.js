@@ -54,6 +54,7 @@ onDataChanged()
 function visitWebSite(index){
     siteUrlInput.value = webSiteArr[index].url
     window.open(siteUrlInput.value,`_blank`)
+    clearForm()
 }
 
 
