@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link href="https://fonts.cdnfonts.com/css/pacifico" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/righteous" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/bree-serif-2" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/pt-sans-caption" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="images/bookmark_2899445.png" type="image/x-icon">
+</head>
+<body class="overflow-auto">
+    <main class="py-5">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="py-2 position-relative">Bookmarker</h1>
+            <div class="w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center bookmark-content">
+                <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+                <div class="form-group py-3 w-100">
+                    <label for="siteNameInput" class="pb-2 fw-bold"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+                    <input type="text" placeholder="Bookmark Name" id="siteNameInput" class="form-control">
+                </div>
+               <div class="form-group py-3 w-100">
+                <label for="siteUrlInput" class="pb-2 fw-bold"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                <input type="text" placeholder="Website URL" id="siteUrlInput" class="form-control">
+               </div>
+               
+                <button onclick="addWebSite()" class="btn btn-danger px-5"  data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content p-2">
+                        <div class="modal-header border-0">
+                          <span class="modal-title1 rounded-circle me-2" id="exampleModalLabel"></span>
+                          <span class="modal-title2 rounded-circle me-2" id="exampleModalLabel"></span>
+                          <span class="modal-title3 rounded-circle me-2" id="exampleModalLabel"></span>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                         <p class="m-0 pb-2">
+                          Site Name or Url is not valid, Please follow the rules below :
+                         </p>
+                        </div>
+                        <div class="modal-footer justify-content-start border-0">
+                         <ul class="list-unstyled m-0">
+                          <li><i class="fa-regular fa-circle-right p-2 text-danger"></i>Site name must contain at least 3 characters</li>
+                          <li><i class="fa-regular fa-circle-right p-2 text-danger"></i>Site URL must be a valid one</li>
+                         </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <table class="table bg-light mt-4 text-center">
+                <thead>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+    
+                <tbody id="tableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
